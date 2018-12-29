@@ -12,12 +12,12 @@ template<> GrapheInt::Graphe(){
     this->myList = null;
 }
 
-template<> void GrapheInt::addVertice(int s) {
+template<> void GrapheInt::addVertice(int& s) {
     auto c = new list<int>();
     this->myList.insert(pair<int,list<int>>(s,*c));
 }
 
-template<> void GrapheInt::addEdge(int s1, int s2) {
+template<> void GrapheInt::addEdge(int& s1, int& s2) {
     this->myList.at(s1).push_back(s2);
     this->myList.at(s2).push_back(s1);
     this->myList.at(s1).unique();

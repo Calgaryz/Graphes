@@ -16,12 +16,12 @@ template<> GrapheChar::Graphe(){
     this->myList = null;
 }
 
-template<> void GrapheChar::addVertice(char s) {
+template<> void GrapheChar::addVertice(char& s) {
     auto c = new list<char>();
     this->myList.insert(pair<char,list<char>>(s,*c));
 }
 
-template<> void GrapheChar::addEdge(char s1, char s2) {
+template<> void GrapheChar::addEdge(char& s1, char& s2) {
     this->myList.at(s1).push_back(s2);
     this->myList.at(s2).push_back(s1);
     this->myList.at(s1).unique();
