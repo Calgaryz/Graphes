@@ -11,17 +11,18 @@
 
 using namespace std;
 
-class Graphe{
+template<typename T> class Graphe{
 
 private:
-    map<char,list<char>> myList;
+    map<T,list<T>> myList;
 public:
     Graphe();
-    void addVertice(char s);
-    void delVertice(char s);
-    void addEdge(char s1, char s2);
-    void delEdge(char s1, char s2);
+    void addVertice(T s);
+    void delVertice(T s);
+    void addEdge(T s1, T s2);
+    void delEdge(T s1, T s2);
     void toString();
+    friend ostream& operator<< (ostream& os, const Graphe& g);
 };
 
 
