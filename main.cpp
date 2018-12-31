@@ -1,13 +1,20 @@
 #include <iostream>
 #include "Graphe.h"
+#include "Tas.h"
 
 int main() {
     auto g = new Graphe<int>();
-    g->addVertice(1);
-    g->addVertice(2);
-    g->addVertice(3);
-    g->addEdge(1,2);
-    g->addEdge(1,3);
+    int a = 1;
+    int b = 1;
+    int c = 1;
+    g->addVertice(a);
+    g->addVertice(b);
+    g->addVertice(c);
+    g->addEdge(a,b);
+    g->addEdge(a,c);
     cout << *g << endl;
+
+    Tas
+
     return 0;
 }
